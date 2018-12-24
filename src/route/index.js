@@ -1,15 +1,26 @@
-import React, {Component} from 'react'
-import Login from '../Login'
-import Manage from '../Manage'
+import React, { Component } from 'react'
+
+import {BrowserRouter  } from "react-router-dom";
+
+import { renderRoutes } from "react-router-config";
+
+import routes from "./config"
+
+
+
 
 class Route extends Component {
-    render (){
+    render() {
         return (
             <div>
                 Route
-                <Login />
-                <Manage/>   
-                </div>
+                {/* <Login />
+                <Manage /> */}
+                <BrowserRouter>
+                    {renderRoutes(routes)}
+
+                </BrowserRouter>
+            </div>
         )
     }
 }
