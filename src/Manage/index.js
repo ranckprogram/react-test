@@ -1,14 +1,28 @@
-import React, {Component} from 'react'
+import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
+import Child from '../Child';
 
-class Manage extends Component {
-    render (){
-        return (
-            <div>
-                Manage
-                </div>
-        )
-    }
+function Manage () {
+    const [name, setName] = useState('1');
+    useEffect(() => {
+
+        // const timer = setInterval(() => {
+        //     console.log(1)
+        // }, 1000)
+        // return () => {
+        //     clearInterval(timer)
+        // }
+    })
+
+    return (
+        <div>
+            Manage
+            <Link to="/" >1</Link>
+            <Child initName={name} />
+            <button onClick={() => setName('haha')}>M</button>
+        </div>
+    );
 }
 
 export default Manage
