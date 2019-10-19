@@ -18,7 +18,6 @@ class Route extends Component {
                 <Manage /> */}
                 <BrowserRouter>
                     {renderRoutes(routes)}
-
                 </BrowserRouter>
             </div>
         )

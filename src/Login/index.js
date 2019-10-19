@@ -1,12 +1,12 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 
 class Login extends Component {
-    render (){
+    render () {
         return (
-            <div>
+            <>
                 login
-                </div>
+</>
         )
     }
 }

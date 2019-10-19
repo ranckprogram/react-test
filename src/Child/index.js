@@ -1,17 +1,17 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
-function Child ({ initName }) {
-  const [name, setName] = useState(initName);
-  
+function Child ({ name }) {
+
   // useEffect(() =>{
   //   setName(initName)
   // })
 
+  console.log('render')
   return (
     <div>
-    { name }
-
-      </div>
+      afhja
+      {name}
+    </div>
   )
 }
 
