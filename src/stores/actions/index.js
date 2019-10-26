@@ -1,7 +1,5 @@
-import { async } from "q"
 
-
-function changeLoading (loading) {
+export function changeLoading (loading) {
   return {
     type: 'CHANGE_LOADING',
     loading,
@@ -52,5 +50,4 @@ export default {
   addList,
   changeState,
   setList,
-
 }
