@@ -1,6 +1,6 @@
 
 
-const initState = {
+export const initState = {
   loading: false,
   list: [],
   state: "pause", // pause, start ,stop

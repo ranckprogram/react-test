@@ -1,5 +1,6 @@
 import Login from '../Login'
 import Manage from '../Manage'
+import App from '../App'
 
 const routes = [{
   path: "/login",
@@ -8,6 +9,10 @@ const routes = [{
 }, {
   path: "/manage",
   component: Manage
+},
+{
+  path: '/',
+  component: App, 
 }
 ]
 

@@ -1,25 +1,23 @@
-import React from 'react'
-import { connect } from 'react-redux'
+import React, { useReducer } from 'react'
+import reducer, { initState } from '../stores/reducers'
 import actions, { changeLoading } from '../stores/actions'
 
 function ReduxTest (props) {
+  const [state, dispatch] = useReducer(reducer, initState)
+
+  console.log(reducer, initState)
+  console.log(state.loading)
+
+  function handleClick () {
+    dispatch(changeLoading(true))
+  }
   return (
     <>
-      ReduxTest
+      <button onClick={handleClick}>change</button>
+      ReduxTest {state.loading ? 'loading' : 'initial'}
     </>
   );
 }
 
-const mapStateToProps = (state) => {
-  return {
-    loading: state.loading,
-  }
-}
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    changeLoading: (loading) => dispatch(changeLoading(loading)),
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(ReduxTest)
+export default ReduxTest
